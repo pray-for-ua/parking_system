@@ -1,0 +1,82 @@
+{
+    "parser": "babel-eslint",
+    "max-len": [2, 120],
+    "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "node"   : true,
+        "es6"    : true
+    },
+    "ecmaFeatures": {"jsx": true},
+    "rules": {
+        "quotes": [1, "backtick"],
+        # "semi": [2, "always", { "omitLastInOneLineBlock": true}],
+        # "prefer-template": 0,
+        "arrow-body-style": [1, "as-needed"],
+        "max-len": [2, 120],
+        # "comma-dangle": [2, "never"],
+        # "object-curly-spacing": 0,
+        "no-unused-expressions": [1, { allowTernary: true }],
+        "id-length": [2, {"min": 2, "exceptions": ['x', 'j', 'i', '_', '$', 'm']}],
+        "spaced-comment": [0],
+        "no-else-return": 0,
+        "default-case": 0,
+        "dot-notation": 0,
+        "no-multi-spaces": [0, {
+            "exceptions": {
+                "VariableDeclarator": true,
+                "AssignmentExpression": true,
+                "JSXAttribute": true
+
+            }
+        }],
+        "no-use-before-define": 0,
+        "consistent-return": 0,
+        # "jsx-quotes": [2, "prefer-double"],
+        "no-multiple-empty-lines": 0,
+        "no-trailing-spaces": 0,
+        "new-cap": 0,
+        "key-spacing": [0, {"align": "colon", "beforeColon": false, "afterColon": true, "mode": "minimum"}],
+        "indent": [2, 4, {"VariableDeclarator": 1, "SwitchCase": 1}],
+        "no-console": 1,
+        "no-alert": 2,
+        // jsx rules
+        "react/sort-comp": [2, {
+            "order": [
+                "constructor",
+                "lifecycle",
+                "everything-else",
+                "render"
+            ]
+        }],
+        'react/jsx-closing-bracket-location': [2, 'line-aligned'],
+        "react/prefer-stateless-function": 2,
+        "react/jsx-first-prop-new-line": [0, "never"],
+        "react/display-name": 1,
+        "react/jsx-equals-spacing": [0, "always"],
+        "react/jsx-indent": [1, 4],
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/react-in-jsx-scope": 2,
+        "react/jsx-indent-props": [2, 4],
+        "react/self-closing-comp": 2,
+        "react/no-did-mount-set-state": 2,
+        "react/no-did-update-set-state": 2,
+        "react/no-direct-mutation-state": 2
+
+    },
+    "plugins": [
+        "react"
+    ],
+    "globals": {
+        "host": true,
+        "_": true,
+        "$": true,
+        "logger": true,
+        "__ENV__": true,
+        "__DEVELOPMENT__": true,
+        "__WL__": true,
+        "__DEVTOOLS__": true,
+        "__PRODUCTION__": true
+    }
+}
